@@ -13,6 +13,7 @@ class EventClientTest(unittest.TestCase):
 
     def setUp(self):
         subprocess.call(['pio', 'app', 'new', '--access-key', access_key, app_name])
+        subprocess.call(['pio', 'app', 'show', app_name])
 
     def tearDown(self):
         subprocess.call(['pio', 'app', 'delete', '-f', app_name])
