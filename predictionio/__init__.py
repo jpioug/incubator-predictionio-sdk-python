@@ -120,7 +120,7 @@ class BaseClient(object):
 
   def _acreate_resp(self, response):
     if response.error is not None:
-      raise NotCreatedError("Exception happened: %s for request %s" %
+      raise NotCreatedError("Exception happened: %s for request %s and response %s" %
                     (response.error, response.request))
     elif response.status != httplib.CREATED:
       raise NotCreatedError("request: %s status: %s body: %s" %
@@ -131,8 +131,8 @@ class BaseClient(object):
 
   def _aget_resp(self, response):
     if response.error is not None:
-      raise NotFoundError("Exception happened: %s for request %s" %
-                  (response.error, response.request))
+      raise NotFoundError("Exception happened: %s for request %s and response %s" %
+                  (response.error, response.request, response))
     elif response.status != httplib.OK:
       raise NotFoundError("request: %s status: %s body: %s" %
                   (response.request, response.status,
