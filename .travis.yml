@@ -8,6 +8,8 @@ jdk:
 python:
   - 2.7
   - 3.4
+  - 3.5
+  - 3.6
 
 cache:
   directories:
@@ -26,7 +28,6 @@ before_script:
 
 script:
   - pio status
-  - cat predictionio-setup/target/pio-setup.log
   - tox -r
 
 after_script:

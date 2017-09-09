@@ -19,7 +19,7 @@ class EventClientTest(unittest.TestCase):
         subprocess.call(['pio', 'app', 'delete', '-f', app_name])
 
     def test_eventclient(self):
-        client = EventClient(access_key=access_key, url="http://localhost:7070")
+        client = EventClient(access_key=access_key, url="http://127.0.0.1:7070")
 
         # Check status
         print("Check status")

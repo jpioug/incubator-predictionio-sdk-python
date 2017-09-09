@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd prediction-setup
+cd predictionio-setup
 ./bin/pio-setup stop
 
