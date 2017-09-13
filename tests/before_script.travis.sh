@@ -1,5 +1,8 @@
 #!/bin/sh
 
+pip install --upgrade .
+rm -r predictionio
+
 mkdir -p predictionio-setup/bin
 cd predictionio-setup
 curl -o bin/pio-setup https://raw.githubusercontent.com/jpioug/predictionio-setup/master/bin/pio-setup
